@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="es"><head><meta charset="utf-8">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@500;700;800&display=swap" rel="stylesheet">
 <style>
 @page { size: 1920px 1080px; margin: 0 }
 * { box-sizing: border-box; margin: 0 }
@@ -34,11 +34,22 @@ h2 { font-size:104px; line-height:1.06; font-weight:700; letter-spacing:-.02em; 
 .bar { height:34px; border-radius:999px; background:linear-gradient(90deg,#ff7a7a,var(--red)); margin-top:70px; max-width:1500px }
 .qr { width:430px; height:430px; border:4px dashed var(--soft); border-radius:32px; display:grid; place-items:center; font-size:30px; color:var(--soft); text-align:center }
 .plus { font-size:200px; font-weight:300; color:var(--red); margin:0 70px }
+.cov { font-family:'Montserrat',sans-serif; padding-left:240px }
+.cov .ring { position:absolute !important; z-index:0 !important; width:440px; height:440px; border:3px solid var(--red); border-radius:50% }
+.cov .r1 { left:-120px; top:-170px } .cov .r2 { right:-130px; bottom:-190px }
+.cov .date { font-size:30px; font-weight:700; letter-spacing:.12em; text-transform:uppercase }
+.cov h1 { font-family:'Montserrat',sans-serif; font-weight:800; font-size:196px; line-height:.98; letter-spacing:-.03em; margin:70px 0 60px; max-width:1500px }
+.cov .pill { width:520px; height:104px; border-radius:999px; background:#dedede; position:relative }
+.cov .pill div { width:370px; height:104px; border-radius:999px; background:var(--red); color:#fff; font-size:30px; font-weight:700; letter-spacing:.1em; display:grid; place-items:center }
+.cov .by { font-size:30px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; margin-top:60px }
 </style></head><body>
 
 <!-- 1 -->
-<div class="s"><div class="g g1"></div><div class="brand">Facundo Ferreira<i>@facu.marketing.uy</i></div>
- <h1>Lo que aprendí trabajando con <span class="red">marcas</span></h1></div>
+<div class="s cov"><div class="ring r1"></div><div class="ring r2"></div>
+ <div class="date">Octubre 2026</div>
+ <h1><span class="red">Hablemos</span> de Marketing</h1>
+ <div class="pill"><div>¿Comenzamos?</div></div>
+ <div class="by">Facundo <span class="red">Ferreira</span></div></div>
 
 <!-- 2 -->
 <div class="s"><div class="g g3"></div><div class="brand">Facundo Ferreira<i>@facu.marketing.uy</i></div>
@@ -52,8 +63,8 @@ h2 { font-size:104px; line-height:1.06; font-weight:700; letter-spacing:-.02em; 
 
 <!-- 4 -->
 <div class="s"><div class="g g4"></div><div class="brand">Facundo Ferreira<i>@facu.marketing.uy</i></div>
- <h2>Un recorrido que <span class="red">no fue lineal</span></h2>
- <div class="tl"><div><b>2019</b><span>La idea de una agencia</span></div><div><b>2021</b><span>Primeros clientes</span></div><div><b>2024</b><span>Técnico en Marketing</span></div><div><b>Hoy</b><span>Blink</span></div></div></div>
+ <h2>Mi <span class="red">camino</span></h2>
+ <div class="tl"><div><b>2019</b><span>Fin de bachillerato de Administración</span></div><div><b>2021</b><span>Primeros clientes</span></div><div><b>2024</b><span>Tecnicatura en Marketing</span></div><div><b class="red">Hoy…</b></div></div></div>
 
 <!-- 5 -->
 <div class="s c"><div class="g g2"></div><div class="brand">Facundo Ferreira<i>@facu.marketing.uy</i></div>
