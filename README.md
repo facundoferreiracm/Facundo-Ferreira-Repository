@@ -1,8 +1,8 @@
-# Landing – PDF de regalo
+# Landing – Guía de RRSS de regalo (charla)
 
-Landing estática (`index.html`) con la estética de la propuesta: fondo negro, resplandor rojo, tipografía Poppins.
+Landing estática (`index.html`) con la estética de la propuesta: negro, resplandor rojo, Poppins.
+Pide nombre, celular, perfil (estudiante / emprendedor / profesor) y emprendimiento (opcional), y descarga `assets/regalo.pdf`.
 
-## Para dejarla lista
-1. **PDF de regalo:** guardalo como `assets/regalo.pdf`.
-2. **Guardar los registros:** poné la URL en `ENDPOINT` (dentro de `index.html`). Opción simple: Google Sheets + Apps Script (Web App que reciba un POST JSON con `nombre`, `celular`, `emprendimiento`, `fecha`).
-3. **Publicar:** GitHub Pages, Netlify o Vercel (no requiere build).
+- **Guía:** fuente en `guia/guia.html`, PDF generado en `assets/regalo.pdf`.
+- **Guardar registros:** seguí los pasos en `apps-script.gs` y pegá la URL en `ENDPOINT` dentro de `index.html`. Sin esto no se guarda nada.
+- **Publicar:** GitHub Pages (Settings > Pages > rama a publicar) o Netlify/Vercel. Generá un QR con la URL para mostrarlo en la charla.

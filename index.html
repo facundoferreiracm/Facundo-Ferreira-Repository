@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Regalo gratuito | Facundo Ferreira</title>
-<meta name="description" content="Registrate y descargá gratis tu regalo para hacer crecer tu emprendimiento en redes sociales.">
+<title>Guía de RRSS gratis | Facundo Ferreira</title>
+<meta name="description" content="Descargá la guía express de redes sociales y pedí tu mini diagnóstico personalizado.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -61,6 +61,8 @@
     padding: 13px 14px; width: 100%;
     transition: border-color .2s, box-shadow .2s;
   }
+  select { font: inherit; font-size: 15px; color: var(--fg); background: rgba(0,0,0,.65); border: 1px solid var(--line); border-radius: 10px; padding: 13px 14px; width: 100%; }
+  select:focus { outline: none; border-color: var(--red); box-shadow: 0 0 0 3px rgba(255,0,0,.25); }
   input::placeholder { color: rgba(255,255,255,.35); }
   input:focus { outline: none; border-color: var(--red); box-shadow: 0 0 0 3px rgba(255,0,0,.25); }
   button, .btn {
@@ -101,9 +103,9 @@
   </div>
 
   <section class="hero" id="hero">
-    <p class="eyebrow">Regalo gratis</p>
-    <h1>Hacé crecer tu marca en redes</h1>
-    <p class="lead">Dejanos tus datos y descargá al instante tu PDF de regalo.</p>
+    <p class="eyebrow">Regalo de la charla</p>
+    <h1>5 claves para que tus redes trabajen para vos</h1>
+    <p class="lead">Dejame tus datos, descargá la guía al instante y, si tenés un emprendimiento, te escribo con un mini diagnóstico de tu cuenta, sin costo.</p>
 
     <form id="lead-form" novalidate>
       <label>Nombre
@@ -112,17 +114,25 @@
       <label>Número de celular
         <input name="celular" type="tel" inputmode="tel" autocomplete="tel" placeholder="09X XXX XXX" required>
       </label>
+      <label>¿Qué sos?
+        <select name="perfil">
+          <option value="Estudiante">Estudiante</option>
+          <option value="Emprendedor/a">Tengo un emprendimiento</option>
+          <option value="Profesor/a">Profesor/a</option>
+          <option value="Otro">Otro</option>
+        </select>
+      </label>
       <label>Nombre de tu emprendimiento <small>(opcional)</small>
         <input name="emprendimiento" type="text" autocomplete="organization" placeholder="Si tenés uno, ¿cómo se llama?">
       </label>
       <div class="error" id="error" role="alert"></div>
       <button type="submit" id="submit">Quiero mi regalo</button>
-      <p class="privacy">Solo usaremos tus datos para enviarte contenido de marketing.</p>
+      <p class="privacy">Solo usaré tus datos para contactarte sobre marketing y redes.</p>
     </form>
 
     <div class="thanks">
       <h2>¡Gracias! 🎁</h2>
-      <p>Tu regalo está listo. Si no se descargó solo, tocá el botón.</p>
+      <p>Tu guía está lista. Si no se descargó sola, tocá el botón. Si tenés emprendimiento, te escribo pronto.</p>
       <a class="btn" id="download" href="assets/regalo.pdf" download>Descargar PDF</a>
     </div>
   </section>
@@ -152,6 +162,7 @@
     data.nombre = data.nombre.trim();
     data.celular = data.celular.trim();
     data.emprendimiento = data.emprendimiento.trim();
+    data.origen = 'charla';
 
     if (!data.nombre) return err.textContent = 'Ingresá tu nombre.';
     if (data.celular.replace(/\D/g, '').length < 8) return err.textContent = 'Ingresá un número de celular válido.';
